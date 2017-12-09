@@ -31,6 +31,14 @@ public class TestServer {
     }
 
     @Test
+    public void testGet() {
+        Assert.assertNotNull(gameServer.getGameId());
+        Assert.assertEquals(GameMode.Hardcore, gameServer.getGameMode());
+        Assert.assertTrue(gameServer.getPlayers().size() == 2);
+        Assert.assertEquals("195.65.78.250:21505", gameServer.getHostIp());
+    }
+
+    @Test
     public void testId() {
         gameServer.setGameId(null);
         Set<ConstraintViolation<GameServer>> constraintViolations = validator.validate(gameServer);

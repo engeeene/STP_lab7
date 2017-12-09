@@ -25,6 +25,15 @@ public class TestPlayer {
     }
 
     @Test
+    public void testGet() {
+        Assert.assertEquals("engeeene", player.getPlayerNick());
+        Assert.assertEquals("Tymur", player.getPlayerFirstName());
+        Assert.assertEquals("Levchnko", player.getPlayerSecondName());
+        Assert.assertEquals("en9eeene@gmail.com", player.getPlayerEmail());
+        Assert.assertEquals(Gender.Male, player.getGender());
+    }
+
+    @Test
     public void testNick() {
         player.setPlayerNick("sdfdsdsf~");
         Set<ConstraintViolation<Player>> constraintViolations = validator.validate(player);

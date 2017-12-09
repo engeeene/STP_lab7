@@ -15,7 +15,9 @@ public class Player {
     @NotNull
     @Size(min = 3, max = 32, message = "Player nick length must be from 3 to 32 symbols")
     @Pattern(regexp = "[a-zA-Z0-9_]+", message = "Invalid nick")
-    @Getter @Setter private String playerNick;
+    @Getter
+    @Setter
+    private String playerNick;
 
     @NotNull
     @Size(min = 3, max = 32, message = "Player first name length must be from 3 to 32 symbols")
@@ -32,7 +34,9 @@ public class Player {
     private String playerSecondName;
 
     @NotNull(message = "Then who are you?")
-    @Getter @Setter private Gender gender;
+    @Getter
+    @Setter
+    private Gender gender;
 
     @NotNull
     @Size(max = 64, message = "Email length can not be more than 64 symbols")
